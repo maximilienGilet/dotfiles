@@ -1,0 +1,24 @@
+####   https://github.com/maximilienGilet/dotfiles   ####
+
+background no
+out_to_x no
+out_to_console yes
+update_interval 1
+total_run_times 0
+use_spacer none
+
+
+TEXT
+${if_running cmus}
+${if_match "${exec cmus-remote -Q | grep status | cut -d " " -f 2-}" == "playing"}  ${endif}\
+${if_match "${exec cmus-remote -Q | grep status | cut -d " " -f 2-}" == "paused"}  ${endif}\
+${if_match "${exec cmus-remote -Q | grep status | cut -d " " -f 2-}" == "stopped"}  ${endif}\
+${exec cmus-remote -Q | grep -m 1 artist | cut -d " " -f 3-} - ${exec cmus-remote -Q | grep title | cut -d " " -f 3-}  |  ${endif}\
+${if_match "${addr enp4s0}" != "No Address"}   ${downspeedf enp4s0} / ${upspeedf enp4s0}  |  ${endif}\
+${if_match "${addr wlp5s0}" != "No Address"}  ${wireless_essid wlp5s0}  |  ${endif}\
+${if_match ${battery_percent BAT1} < 95}${if_match "${acpiacadapter}" != "on-line"} ${else} ${endif} ${if_match ${battery_percent BAT0} > 20} ${endif}\
+${if_match ${battery_percent BAT1} > 80}  ${else}${if_match ${battery_percent BAT1} > 60}  ${else}${if_match ${battery_percent BAT1} > 40}  ${else}${if_match ${battery_percent BAT1} > 20}  ${else}  ${endif}${endif}${endif}${endif}\
+${battery_percent BAT1}%  ${battery_time BAT1}  | ${endif} \
+${if_match "${exec amixer -c 1 -M -D pulse get Master | grep 'Front Left:' | awk '{print $6}'}" != "[off]"}  ${exec amixer -c 1 -M -D pulse get Master | grep -o -E [[:digit:]]+%|head -1}${else}   ${endif}  |  \
+  ${time %a %d %b}  |  \
+  ${time %H:%M}  | 
