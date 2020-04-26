@@ -1,0 +1,33 @@
+#!/bin/bash
+
+rofi_command="rofi -p Powermenu   -theme ~/.config/rofi/nord-power.rasi"
+
+### Options ###
+power_off=" Éteindre"
+reboot=" Redémarrer"
+lock=" Vérouiller"
+log_out=" Déconnexion"
+# Variable passed to rofi
+options="$power_off\n$reboot\n$lock\n$log_out"
+
+chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 2)"
+case $chosen in
+    $power_off)
+        halt
+        exit
+        ;;
+    $reboot)
+        halt --reboot
+        exit
+        ;;
+    $lock)
+        ~/lock.sh
+        exit
+        ;;
+    $log_out)
+        loginctl terminate-session c2
+		exit
+        ;;
+esac
+
+
