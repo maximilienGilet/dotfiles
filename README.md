@@ -8,4 +8,4 @@ A collection of my dotfiles
 
 A Qtile configuration with nord theme and colorscheme
 
-![screenshot](/home/maximilien/dotfiles/qtile-nord/screenshot.png)
+![screenshot](./qtile-nord/screenshot.png)
