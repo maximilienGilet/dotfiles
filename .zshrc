@@ -123,6 +123,7 @@ alias ll="eza -l -a"
 alias la="eza -a"
 alias l="eza -l"
 alias v='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
+alias n="nvim"
 
 
 bindkey -s ^f "tmux-sessionizer\n"
