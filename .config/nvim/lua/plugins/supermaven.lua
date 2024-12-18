@@ -24,12 +24,12 @@ return {
     end,
   },
 
-  {
-    "hrsh7th/nvim-cmp",
-    dependencies = { "supermaven-inc/supermaven-nvim" },
-    keys = {
-      { "<tab>", false, mode = { "i", "s" } },
-      { "<s-tab>", false, mode = { "i", "s" } },
-    },
-  },
+  -- {
+  --   "hrsh7th/nvim-cmp",
+  --   dependencies = { "supermaven-inc/supermaven-nvim" },
+  --   keys = {
+  --     { "<tab>", false, mode = { "i", "s" } },
+  --     { "<s-tab>", false, mode = { "i", "s" } },
+  --   },
+  -- },
 }
