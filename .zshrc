@@ -134,6 +134,8 @@ export PATH="$HOME/.local/bin:$PATH"
 
 export BAT_THEME="Catppuccin Mocha"
 
+# export NODE_EXTRA_CA_CERTS="~/certificats/CA_MAIF_ROOTCA.crt"
+
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"
@@ -142,3 +144,9 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+function set_kitty_title() {
+    printf "\e]2;%s\a" "${PWD##*/}: $(basename "$SHELL")"
+}
+
+precmd_functions+=(set_kitty_title)

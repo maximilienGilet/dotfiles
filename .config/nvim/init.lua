@@ -1,6 +1,8 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
+vim.o.title = true
+
 -- Put anything you want to happen only in Neovide here
 if vim.g.neovide then
   vim.o.guifont = "ZedMono Nerd Font Mono:h16"
