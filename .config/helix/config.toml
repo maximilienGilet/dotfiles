@@ -1,0 +1,129 @@
+theme = "catppuccin_mocha"
+
+[editor]
+line-number = "relative"
+cursorline = true
+clipboard-provider = "termcode"
+color-modes = true
+bufferline = "multiple" # Enable tab bar at the top
+end-of-line-diagnostics = "hint"
+# Show a ruler at column 120
+rulers = [120]
+# Force the theme to show colors
+true-color = true
+auto-save = true
+auto-format = true
+auto-completion = true
+
+[editor.inline-diagnostics]
+# Minimum severity to show a diagnostic on the primary cursor's line.
+# Note that `cursor-line` diagnostics are hidden in insert mode.
+cursor-line = "error"
+# Minimum severity to show a diagnostic on other lines:
+other-lines = "error"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.soft-wrap]
+enable = true
+
+[editor.whitespace.render]
+space = "none"
+nbsp = "none"
+tab = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)# Do not render white spaces
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.statusline]
+left = [
+  "mode",
+  "spacer",
+  "version-control",
+  "spacer",
+  "separator",
+  "file-name",
+  "file-modification-indicator"
+]
+right = [
+  "spinner",
+  "spacer",
+  "workspace-diagnostics",
+  "separator",
+  "spacer",
+  "diagnostics",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type"
+]
+separator = "▏"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+# LSP Server configuration
+[editor.lsp]
+display-messages = true
+auto-signature-help	= true
+display-signature-help-docs	= true
+
+# Key mappings
+[keys.normal]
+D = "kill_to_line_end"
+# Use Shift-l and -h to move through tabs
+S-l = ":buffer-next"
+S-h = ":buffer-previous"
+"(" = ["goto_prev_paragraph", "collapse_selection"]
+")" = ["goto_next_paragraph", "collapse_selection"]
+C-e = ["align_view_bottom", "move_line_down" ]
+C-y = ["align_view_top", "move_line_up" ]
+x = "select_line_below"
+X = "select_line_above"
+C-v = "vsplit"
+C-h = "jump_view_left"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+C-l = "jump_view_right"
+"C-," = "goto_previous_buffer"
+"C-." = "goto_next_buffer"
+"K" = "insert_newline"
+# Move line up/down using A-k, A-j
+"A-k" = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before"
+]
+"A-j" = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before"
+]
+
+[keys.select]
+x = "select_line_below"
+X = "select_line_above"
+
+[keys.insert]
+j = { k = "normal_mode" }
+# VSCode-like auto-completeion (pretty much all IDEs do it on C-space)
+"C-space" = "completion"
+
