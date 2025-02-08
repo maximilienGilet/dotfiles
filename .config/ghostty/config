@@ -1,0 +1,5 @@
+font-family = "ZedMono NFM";
+theme = light:catppuccin-mocha, dark:catppuccin-mocha;
+cursor-style-blink = true
+mouse-hide-while-typing = true
+
