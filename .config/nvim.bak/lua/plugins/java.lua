@@ -1,7 +1,6 @@
 return {
   "nvim-java/nvim-java",
   config = false,
-  event = "VeryLazy",
   dependencies = {
     {
       "neovim/nvim-lspconfig",
