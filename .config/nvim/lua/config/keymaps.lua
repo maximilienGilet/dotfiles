@@ -15,3 +15,18 @@ vim.keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>", { desc = "window up" })
 -- easy windows
 vim.keymap.set("n", "<leader>ws", "<cmd>vsplit<cr>")
 vim.keymap.set("n", "<leader>wS", "<cmd>split<cr>")
+
+-- codecompanion
+vim.keymap.set(
+  { "n", "v" },
+  "<leader>aa",
+  "<cmd>CodeCompanionActions<cr>",
+  { noremap = true, silent = true, desc = "AI actions" }
+)
+vim.keymap.set(
+  { "n", "v" },
+  "<leader>ac",
+  "<cmd>CodeCompanionChat Toggle<cr>",
+  { noremap = true, silent = true, desc = "AI chat" }
+)
+vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true, desc = "Add to AI chat" })
