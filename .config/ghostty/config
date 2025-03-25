@@ -2,4 +2,9 @@ font-family = "ZedMono NFM";
 theme = light:catppuccin-mocha, dark:catppuccin-mocha;
 cursor-style-blink = true
 mouse-hide-while-typing = true
-
+cursor-invert-fg-bg = true
+selection-invert-fg-bg = true
+window-titlebar-foreground = #FFFFFF
+background-opacity = 0.98
+background-blur = true
+macos-titlebar-style = hidden
