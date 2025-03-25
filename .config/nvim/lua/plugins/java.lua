@@ -23,23 +23,23 @@ return {
             },
           },
         },
-        setup = {
-          jdtls = function()
-            -- Your nvim-java configuration goes here
-            require("java").setup({
-              root_markers = {
-                "settings.gradle",
-                "settings.gradle.kts",
-                "pom.xml",
-                "build.gradle",
-                "mvnw",
-                "gradlew",
-                "build.gradle",
-                "build.gradle.kts",
-              },
-            })
-          end,
-        },
+        -- setup = {
+        --   jdtls = function()
+        --     -- Your nvim-java configuration goes here
+        --     require("java").setup({
+        --       root_markers = {
+        --         "settings.gradle",
+        --         "settings.gradle.kts",
+        --         "pom.xml",
+        --         "build.gradle",
+        --         "mvnw",
+        --         "gradlew",
+        --         "build.gradle",
+        --         "build.gradle.kts",
+        --       },
+        --     })
+        --   end,
+        -- },
       },
     },
   },
