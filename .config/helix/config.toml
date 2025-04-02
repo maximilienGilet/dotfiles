@@ -1,11 +1,11 @@
-theme = "catppuccin_mocha"
+theme = "cyberdream"
 
 [editor]
 line-number = "relative"
 cursorline = true
 clipboard-provider = "termcode"
 color-modes = true
-bufferline = "multiple" # Enable tab bar at the top
+bufferline = "multiple"          # Enable tab bar at the top
 end-of-line-diagnostics = "hint"
 # Show a ruler at column 120
 rulers = [120]
@@ -44,7 +44,7 @@ space = "·"
 nbsp = "⍽"
 tab = "→"
 newline = "⏎"
-tabpad = "·" # Tabs will look like "→···" (depending on tab width)# Do not render white spaces
+tabpad = "·"  # Tabs will look like "→···" (depending on tab width)# Do not render white spaces
 
 [editor.indent-guides]
 render = true
@@ -59,7 +59,7 @@ left = [
   "spacer",
   "separator",
   "file-name",
-  "file-modification-indicator"
+  "file-modification-indicator",
 ]
 right = [
   "spinner",
@@ -71,7 +71,7 @@ right = [
   "position",
   "file-encoding",
   "file-line-ending",
-  "file-type"
+  "file-type",
 ]
 separator = "▏"
 mode.normal = "NORMAL"
@@ -81,8 +81,8 @@ mode.select = "SELECT"
 # LSP Server configuration
 [editor.lsp]
 display-messages = true
-auto-signature-help	= true
-display-signature-help-docs	= true
+auto-signature-help = true
+display-signature-help-docs = true
 
 # Key mappings
 [keys.normal]
@@ -92,8 +92,8 @@ S-l = ":buffer-next"
 S-h = ":buffer-previous"
 "(" = ["goto_prev_paragraph", "collapse_selection"]
 ")" = ["goto_next_paragraph", "collapse_selection"]
-C-e = ["align_view_bottom", "move_line_down" ]
-C-y = ["align_view_top", "move_line_up" ]
+C-e = ["align_view_bottom", "move_line_down"]
+C-y = ["align_view_top", "move_line_up"]
 x = "select_line_below"
 X = "select_line_above"
 C-v = "vsplit"
@@ -109,13 +109,13 @@ C-l = "jump_view_right"
   "extend_to_line_bounds",
   "delete_selection",
   "move_line_up",
-  "paste_before"
+  "paste_before",
 ]
 "A-j" = [
   "extend_to_line_bounds",
   "delete_selection",
   "move_line_down",
-  "paste_before"
+  "paste_before",
 ]
 
 [keys.select]
@@ -126,4 +126,3 @@ X = "select_line_above"
 j = { k = "normal_mode" }
 # VSCode-like auto-completeion (pretty much all IDEs do it on C-space)
 "C-space" = "completion"
-

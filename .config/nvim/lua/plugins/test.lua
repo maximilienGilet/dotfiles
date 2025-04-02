@@ -14,7 +14,7 @@ return {
             return vim.fn.getcwd()
           end,
         }),
-        ["neotest-vitest"] = {},
+        require("neotest-vitest"),
       },
     })
   end,
