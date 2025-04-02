@@ -24,5 +24,12 @@ return {
   opts = {
     transparent = true,
     italic_comments = true,
+    colors = {
+      -- For a list of colors see `lua/cyberdream/colours.lua`
+      -- Example:
+      grey = "#caced5",
+      green = "#00ff00",
+      magenta = "#ff00ff",
+    },
   },
 }

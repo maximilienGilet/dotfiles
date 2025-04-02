@@ -149,4 +149,17 @@ function set_kitty_title() {
     printf "\e]2;%s\a" "${PWD##*/}: $(basename "$SHELL")"
 }
 
+function ghostty_custom {
+  local GHOSTTY_DIR="$HOME/.config/ghostty"
+  local CMD="sed -i '' 's:\(config-file = {1}\)/.*:\1/{2}:' $GHOSTTY_DIR/config && osascript -so -e 'tell application \"Ghostty\" to activate' -e 'tell application \"System Events\" to keystroke \",\" using {command down, shift down}'"
+  fd \
+    --type f \
+    --exclude 'config' \
+    --base-directory $GHOSTTY_DIR \
+  | fzf \
+    --preview "cat $GHOSTTY_DIR/{}" \
+    --delimiter=/ \
+    --bind="enter:become:$CMD"
+}
+
 precmd_functions+=(set_kitty_title)
