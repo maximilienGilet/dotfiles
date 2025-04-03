@@ -30,6 +30,9 @@ return {
       grey = "#caced5",
       green = "#00ff00",
       magenta = "#ff00ff",
+      -- invert blue & cyan
+      cyan = "#5ea1ff",
+      blue = "#5ef1ff",
     },
   },
 }
