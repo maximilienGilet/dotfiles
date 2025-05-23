@@ -5,7 +5,6 @@
 -- jj / jk to escape
 vim.keymap.set("i", "jj", "<esc>", { noremap = true })
 vim.keymap.set("i", "jk", "<esc>", { noremap = true })
-
 -- tmux
 vim.keymap.set("n", "<C-h>", "<cmd>TmuxNavigateLeft<CR>", { desc = "window left" })
 vim.keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>", { desc = "window right" })
@@ -13,20 +12,15 @@ vim.keymap.set("n", "<C-j>", "<cmd>TmuxNavigateDown<CR>", { desc = "window down"
 vim.keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>", { desc = "window up" })
 
 -- easy windows
-vim.keymap.set("n", "<leader>ws", "<cmd>vsplit<cr>")
-vim.keymap.set("n", "<leader>wS", "<cmd>split<cr>")
+vim.keymap.set("n", "<leader>ws", "<cmd>vsplit<cr>", { desc = "Split vertically" })
+vim.keymap.set("n", "<leader>wS", "<cmd>split<cr>", { desc = "Split horizontally" })
 
--- codecompanion
-vim.keymap.set(
-  { "n", "v" },
-  "<leader>aa",
-  "<cmd>CodeCompanionActions<cr>",
-  { noremap = true, silent = true, desc = "AI actions" }
-)
-vim.keymap.set(
-  { "n", "v" },
-  "<leader>ac",
-  "<cmd>CodeCompanionChat Toggle<cr>",
-  { noremap = true, silent = true, desc = "AI chat" }
-)
-vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true, desc = "Add to AI chat" })
+-- tabs
+vim.keymap.set("n", "<leader><tab>n", "<cmd>tabn<cr>", { desc = "Next tab" })
+vim.keymap.set("n", "<leader><tab>p", "<cmd>tabp<cr>", { desc = "Prev tab" })
+
+-- duplicate & comment line
+vim.keymap.set("n", "ycc", "yygccp", { remap = true, desc = "Duplicate & copy line" })
+
+-- oil
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

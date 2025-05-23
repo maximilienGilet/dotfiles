@@ -8,3 +8,5 @@ window-titlebar-foreground = #FFFFFF
 background-opacity = 0.95
 background-blur = true
 macos-titlebar-style = hidden
+
+ctrl+i=unbind

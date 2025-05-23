@@ -122,8 +122,12 @@ alias ls="eza -l"
 alias ll="eza -l -a"
 alias la="eza -a"
 alias l="eza -l"
-alias v='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
+alias v='fd --type f --hidden --exclude .git | fzf-tmux -p --preview "bat -n --color=always {}" --reverse | xargs nvim'
 alias n="nvim"
+alias g="git"
+alias gg="lazygit"
+alias c="clear"
+
 
 
 bindkey -s ^f "tmux-sessionizer\n"
@@ -131,8 +135,8 @@ bindkey -s ^b "tsesh\n"
 
 export PATH="/opt/homebrew/opt/tomcat@9/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/cargo/bin:$PATH"
 
-export BAT_THEME="Catppuccin Mocha"
 
 # export NODE_EXTRA_CA_CERTS="~/certificats/CA_MAIF_ROOTCA.crt"
 
@@ -163,3 +167,21 @@ function ghostty_custom {
 }
 
 precmd_functions+=(set_kitty_title)
+
+
+# Preview file content using bat (https://github.com/sharkdp/bat)
+export FZF_CTRL_T_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+
+  # CTRL-Y to copy the command into clipboard using pbcopy
+export FZF_CTRL_R_OPTS="
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
+
+  # Print tree structure in the preview window
+export FZF_ALT_C_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'tree -C {}'"
