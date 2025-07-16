@@ -23,4 +23,4 @@ vim.keymap.set("n", "<leader><tab>p", "<cmd>tabp<cr>", { desc = "Prev tab" })
 vim.keymap.set("n", "ycc", "yygccp", { remap = true, desc = "Duplicate & copy line" })
 
 -- oil
-vim.keymap.set("n", "-", "<cmd>lua require('oil').open_float('.') <CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "-", "<CMD>Oil --preview<CR>", { desc = "Open parent directory" })
