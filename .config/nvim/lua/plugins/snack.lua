@@ -2,8 +2,16 @@ return {
   "folke/snacks.nvim",
   ---@type snacks.Config
   opts = {
+    terminal = {
+      win = {
+        position = "float",
+      },
+    },
     picker = {
       sources = {
+        files = {
+          hidden = true,
+        },
         explorer = {
           -- your explorer configuration comes here
           -- or leave it empty to use the default settings
