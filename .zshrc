@@ -127,6 +127,10 @@ alias n="nvim"
 alias g="git"
 alias gg="lazygit"
 alias c="clear"
+alias ni="npm install"
+alias nt="npm run test"
+alias ys="yarn start"
+alias yt="yarn test"
 
 
 
