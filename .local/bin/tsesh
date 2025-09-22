@@ -94,7 +94,7 @@ else
   fzf_args="--header-lines=1 --ansi"
   if [[ ! -z $POPUP && $TERM_PROGRAM == "tmux" ]]; then
     fzf_bin="fzf-tmux --reverse -p 50%,50%"
-    fzf_args+=" --border=none --height=100%"
+    fzf_args+=" --height=100%"
   fi
   selected=$(find_directories | tabulate | column -t -s' ' |
     sed '1s/^/  /' | $fzf_bin $fzf_args)
