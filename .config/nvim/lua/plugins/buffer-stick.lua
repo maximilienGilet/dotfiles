@@ -18,6 +18,8 @@ return {
         active = { link = "Statement" },
         inactive = { link = "Comment" },
         label = { link = "Comment" },
+        active_modified = { link = "Character" },
+        inactive_modified = { link = "Character" },
       },
     })
     sticks.show()

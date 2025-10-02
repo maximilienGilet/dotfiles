@@ -24,3 +24,7 @@ vim.keymap.set("n", "ycc", "yygccp", { remap = true, desc = "Duplicate & copy li
 
 -- oil
 vim.keymap.set("n", "-", "<CMD>Oil --preview<CR>", { desc = "Open parent directory" })
+
+-- code lens
+vim.keymap.set("n", "<leader>ct", "<cmd>LenslineToggleView<cr>", { desc = "Toggle lensline" })
+vim.keymap.set("n", "<leader>cn", "<cmd>LenslineProfile<cr>", { desc = "Next lensline profile" })
