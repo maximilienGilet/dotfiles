@@ -28,3 +28,35 @@ vim.keymap.set("n", "-", "<CMD>Oil --preview<CR>", { desc = "Open parent directo
 -- code lens
 vim.keymap.set("n", "<leader>ct", "<cmd>LenslineToggleView<cr>", { desc = "Toggle lensline" })
 vim.keymap.set("n", "<leader>cn", "<cmd>LenslineProfile<cr>", { desc = "Next lensline profile" })
+
+-- package info
+vim.keymap.set(
+  { "n" },
+  "<leader>cpt",
+  require("package-info").toggle,
+  { desc = "Toggle package info", silent = true, noremap = true }
+)
+vim.keymap.set(
+  { "n" },
+  "<leader>cpu",
+  require("package-info").update,
+  { desc = "Update package", silent = true, noremap = true }
+)
+vim.keymap.set(
+  { "n" },
+  "<leader>cpd",
+  require("package-info").delete,
+  { desc = "Delete package", silent = true, noremap = true }
+)
+vim.keymap.set(
+  { "n" },
+  "<leader>cpi",
+  require("package-info").install,
+  { desc = "Install package", silent = true, noremap = true }
+)
+vim.keymap.set(
+  { "n" },
+  "<leader>cpv",
+  require("package-info").change_version,
+  { desc = "Change package version", silent = true, noremap = true }
+)
