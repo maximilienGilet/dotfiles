@@ -5,6 +5,11 @@
 -- jj / jk to escape
 vim.keymap.set("i", "jj", "<esc>", { noremap = true })
 vim.keymap.set("i", "jk", "<esc>", { noremap = true })
+
+-- simgle keystroke command on colemak
+vim.keymap.set({ "n", "v", "x" }, ";", ":")
+vim.keymap.set({ "n", "v", "x" }, ":", ";")
+
 -- tmux
 vim.keymap.set("n", "<C-h>", "<cmd>TmuxNavigateLeft<CR>", { desc = "window left" })
 vim.keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>", { desc = "window right" })
@@ -14,6 +19,9 @@ vim.keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>", { desc = "window up" })
 -- easy windows
 vim.keymap.set("n", "<leader>ws", "<cmd>vsplit<cr>", { desc = "Split vertically" })
 vim.keymap.set("n", "<leader>wS", "<cmd>split<cr>", { desc = "Split horizontally" })
+
+vim.keymap.set("n", "<M-i>", "<cmd>vertical resize +5<CR>") -- Increase width
+vim.keymap.set("n", "<M-e>", "<cmd>vertical resize -5<CR>") -- Decrease width
 
 -- tabs
 vim.keymap.set("n", "<leader><tab>n", "<cmd>tabn<cr>", { desc = "Next tab" })

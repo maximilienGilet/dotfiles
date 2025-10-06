@@ -70,6 +70,13 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+
+source $HOMEBREW_PREFIX//share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOMEBREW_PREFIX/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
 plugins=(git asdf zsh-autosuggestions zsh-syntax-highlighting zsh-completions fzf-tab tmux zsh-vi-mode)
 
 
@@ -87,7 +94,6 @@ source $ZSH/oh-my-zsh.sh
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
-. ~/.asdf/plugins/java/set-java-home.zsh
 
 # User configuration
 
@@ -189,3 +195,11 @@ export FZF_CTRL_R_OPTS="
 export FZF_ALT_C_OPTS="
   --walker-skip .git,node_modules,target
   --preview 'tree -C {}'"
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
