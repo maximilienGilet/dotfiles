@@ -3,9 +3,16 @@ return {
   ft = "json",
   dependencies = "MunifTanjim/nui.nvim",
   opts = {
-    colors = {
-      up_to_date = "#3C4048", -- Text color for up to date dependency virtual text
-      outdated = "#f1ff5e", -- Text color for outdated dependency virtual text
+    highlights = {
+      up_to_date = { -- highlight for up to date dependency virtual text
+        fg = "#3C4048",
+      },
+      outdated = { -- highlight for outdated dependency virtual text
+        fg = "##f1ff5e",
+      },
+      invalid = { -- highlight for invalid dependency virtual text
+        fg = "#ee4b2b",
+      },
     },
     icons = {
       enable = true, -- Whether to display icons
