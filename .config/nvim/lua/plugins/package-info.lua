@@ -8,7 +8,7 @@ return {
         fg = "#3C4048",
       },
       outdated = { -- highlight for outdated dependency virtual text
-        fg = "##f1ff5e",
+        fg = "#f1ff5e",
       },
       invalid = { -- highlight for invalid dependency virtual text
         fg = "#ee4b2b",
