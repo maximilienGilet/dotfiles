@@ -95,6 +95,9 @@ source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
 
+source ~/.local/bin/js-pm.sh
+
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
