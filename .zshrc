@@ -176,6 +176,19 @@ function ghostty_custom {
     --bind="enter:become:$CMD"
 }
 
+function fzfrg {
+  local search=""
+  if [[ $# -gt 0 ]]; then
+    search="$1"
+    shift
+  fi
+  command rg --color=always --line-number --no-heading --hidden --smart-case "$@" "$search" \
+  | command fzf -d':' --ansi \
+    --preview "command bat -p --color=always {1} --highlight-line {2}" \
+    --preview-window ~8,+{2}-5 \
+  | awk -F':' '{print $1}'
+}
+
 precmd_functions+=(set_kitty_title)
 
 
