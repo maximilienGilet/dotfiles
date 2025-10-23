@@ -1,0 +1,38 @@
+# Personal session data
+projects/
+debug/
+shell-snapshots/
+file-history/
+todos/
+history.jsonl
+ide/
+
+mcp_config.example.json
+mcp_config.json
+settings.example.json
+
+
+ Cache and analytics
+statsig/
+
+# Backups
+backups/
+backup.*/
+
+# Logs
+logs/
+
+# Local configuration (machine-specific)
+mcp_config.json
+settings.json
+settings.local.json
+.claude/settings.local.json
+
+# IDE and system files
+.vscode/
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+.mcp.json
