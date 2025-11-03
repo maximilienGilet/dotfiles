@@ -1,0 +1,10 @@
+{
+  "claude-code-templates": {
+    "source": {
+      "source": "git",
+      "url": "https://github.com/davila7/claude-code-templates.git"
+    },
+    "installLocation": "/Users/maximiliengilet/.claude/plugins/marketplaces/claude-code-templates",
+    "lastUpdated": "2025-11-03T09:19:22.853Z"
+  }
+}

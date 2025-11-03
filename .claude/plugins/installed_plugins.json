@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "plugins": {
+    "supabase-toolkit@claude-code-templates": {
+      "version": "unknown",
+      "installedAt": "2025-11-03T09:24:13.953Z",
+      "lastUpdated": "2025-11-03T09:24:13.953Z",
+      "installPath": "/Users/maximiliengilet/.claude/plugins/marketplaces/claude-code-templates/",
+      "gitCommitSha": "92e2d1184d3a5e10394c0c9fd2839e917607b896",
+      "isLocal": true
+    },
+    "devops-automation@claude-code-templates": {
+      "version": "unknown",
+      "installedAt": "2025-11-03T09:24:13.953Z",
+      "lastUpdated": "2025-11-03T09:24:13.953Z",
+      "installPath": "/Users/maximiliengilet/.claude/plugins/marketplaces/claude-code-templates/",
+      "gitCommitSha": "92e2d1184d3a5e10394c0c9fd2839e917607b896",
+      "isLocal": true
+    },
+    "documentation-generator@claude-code-templates": {
+      "version": "unknown",
+      "installedAt": "2025-11-03T09:24:13.953Z",
+      "lastUpdated": "2025-11-03T09:24:13.953Z",
+      "installPath": "/Users/maximiliengilet/.claude/plugins/marketplaces/claude-code-templates/",
+      "gitCommitSha": "92e2d1184d3a5e10394c0c9fd2839e917607b896",
+      "isLocal": true
+    },
+    "git-workflow@claude-code-templates": {
+      "version": "unknown",
+      "installedAt": "2025-11-03T09:24:13.953Z",
+      "lastUpdated": "2025-11-03T09:24:13.953Z",
+      "installPath": "/Users/maximiliengilet/.claude/plugins/marketplaces/claude-code-templates/",
+      "gitCommitSha": "92e2d1184d3a5e10394c0c9fd2839e917607b896",
+      "isLocal": true
+    }
+  }
+}
