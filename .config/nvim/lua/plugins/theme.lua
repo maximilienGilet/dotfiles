@@ -22,9 +22,10 @@ return {
   lazy = false,
   priority = 1000,
   opts = {
-    transparent = true,
+    transparent = false,
     italic_comments = true,
     colors = {
+      bg = "#000000",
       -- For a list of colors see `lua/cyberdream/colours.lua`
       -- Example:
       grey = "#caced5",
