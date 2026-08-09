@@ -1,3 +1,4 @@
+onboarding = false
 # herdr configuration
 # Place this file at ~/.config/herdr/config.toml
 
@@ -241,7 +242,7 @@ delivery = "system"
 # Requires a Kitty graphics-compatible outer terminal.
 kitty_graphics = true
 # Save recent pane screen history across full server restarts.
-pane_history = false
+pane_history = true
 # While prefix mode is active, temporarily switch the macOS host input
 # source to an ASCII-capable keyboard layout so prefix commands register
 # even when a CJK IME is active, then restore the previous input source
@@ -262,11 +263,28 @@ pane_history = false
 # Values: block, steady_block (default), underline, steady_underline, bar, steady_bar.
 # cjk_ime_cursor_shape = "steady_block"
 
-switch_ascii_input_source_in_prefix = false
+switch_ascii_input_source_in_prefix = true
 [advanced]
 # Maximum scrollback buffer size in bytes retained per pane terminal.
 # Matches Ghostty's default scrollback-limit behavior.
 # scrollback_limit_bytes = 10000000
+
+[[keys.command]]
+key = "prefix+alt+g"
+type = "popup"
+command = "lazygit"
+description = "run lazygit"
+width = "80%"
+height = "80%"
+
+[[keys.command]]
+key = "prefix+t"
+type = "popup"
+command = "exec \"${SHELL:-sh}\""
+description = "open scratch terminal"
+width = "80%"
+height = "80%"
+
 
 [[keys.command]] # open in a split beside your work
 key = "prefix+f"
