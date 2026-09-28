@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mcp": {
+      "url": "https://mcp.linear.app/mcp/readonly",
+      "oauth": {
+        "scope": "read"
+      }
+    }
+  }
+}

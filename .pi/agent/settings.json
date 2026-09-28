@@ -1,0 +1,76 @@
+{
+  "lastChangelogVersion": "0.87.1",
+  "theme": "dark",
+  "quietStartup": true,
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-6-sol",
+  "defaultThinkingLevel": "medium",
+  "packages": [
+    "npm:@dietrichgebert/ponytail",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:pi-lens",
+    "npm:pi-subagents",
+    "npm:pi-web-access",
+    "npm:@ff-labs/pi-fff",
+    "npm:@gotgenes/pi-permission-system@32.0.6",
+    "npm:pi-mcp-adapter"
+  ],
+  "subagents": {
+    "agentOverridesByProvider": {
+      "openai-codex": {
+        "scout": {
+          "model": "openai-codex/gpt-6-luna",
+          "thinking": "low"
+        },
+        "researcher": {
+          "model": "openai-codex/gpt-6-luna",
+          "thinking": "medium"
+        },
+        "worker": {
+          "model": "openai-codex/gpt-6-luna",
+          "thinking": "medium"
+        },
+        "delegate": {
+          "model": "openai-codex/gpt-6-luna",
+          "thinking": "medium"
+        },
+        "reviewer": {
+          "model": "openai-codex/gpt-6-sol",
+          "thinking": "medium"
+        },
+        "evidence-auditor": {
+          "model": "openai-codex/gpt-6-sol",
+          "thinking": "medium"
+        },
+        "oracle": {
+          "model": "openai-codex/gpt-6-astra",
+          "thinking": "high"
+        }
+      },
+      "tensorx": {
+        "scout": {
+          "model": "tensorx/deepseek/deepseek-v4-flash-0731"
+        },
+        "researcher": {
+          "model": "tensorx/deepseek/deepseek-v4-flash-0731"
+        },
+        "worker": {
+          "model": "tensorx/deepseek/deepseek-v4-flash-0731"
+        },
+        "delegate": {
+          "model": "tensorx/deepseek/deepseek-v4-flash-0731"
+        },
+        "reviewer": {
+          "model": "tensorx/deepseek/deepseek-v4.1-flash"
+        },
+        "evidence-auditor": {
+          "model": "tensorx/deepseek/deepseek-v4.1-flash"
+        },
+        "oracle": {
+          "model": "tensorx/deepseek/deepseek-v4.1-flash"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://raw.githubusercontent.com/gotgenes/pi-packages/main/packages/pi-permission-system/schemas/permissions.schema.json",
+  "debugLog": false,
+  "permissionReviewLog": false,
+  "yoloMode": false,
+  "doublePressToConfirm": true,
+  "permission": {
+    "*": "allow",
+    "bash": {
+      "*": "allow",
+      "rm -r *": "ask",
+      "rm -rf *": "ask",
+      "rm -fr *": "ask",
+      "find * -delete*": "ask",
+      "sudo *": "ask",
+      "chmod -R *": "ask",
+      "chown -R *": "ask",
+      "kill *": "ask",
+      "pkill *": "ask",
+      "git push *": "ask",
+      "git reset --hard *": "ask",
+      "git clean *": "ask",
+      "git branch -D *": "ask",
+      "git checkout -- *": "ask",
+      "git restore *": "ask",
+      "git rebase *": "ask",
+      "rm -rf /": "deny",
+      "rm -rf /*": "deny",
+      "rm -fr /": "deny",
+      "rm -fr /*": "deny",
+      "mkfs*": "deny",
+      "diskutil erase*": "deny",
+      "diskutil partitionDisk*": "deny",
+      "dd * of=/dev/*": "deny",
+      "shutdown*": "deny",
+      "reboot*": "deny"
+    }
+  }
+}
